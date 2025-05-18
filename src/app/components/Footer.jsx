@@ -60,18 +60,18 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a href="tel:+1234567890" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  Phone: (123) 456-7890
+                  Phone: +91 9818091848
                 </a>
               </li>
               <li>
                 <a href="mailto:info@twca.com" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  Email: info@twca.com
+                  Email: cstushargoswami14@gmail.com
                 </a>
               </li>
               <li>
                 <address className="not-italic text-neutral-600 dark:text-neutral-400">
-                  123 Financial Street<br />
-                  New York, NY 10001
+                  House no. 912, First Floor Sector 14<br />
+                  Faridabad, Haryana, 121001
                 </address>
               </li>
             </ul>
