@@ -54,7 +54,7 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
     { name: 'Disclosures', path: '/disclosures' },
     { name: 'Disclaimers', path: '/disclaimers' },
-    { name: 'Contact', path: '/contact' },
+    // { name: 'Contact', path: '/contact' },
   ];
 
   return (    <header      className={`fixed w-full z-50 transition-all duration-300 ${
