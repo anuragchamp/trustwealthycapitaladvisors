@@ -1,121 +1,180 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../../public/download.svg';
-
+import { Mail, Phone, MapPin } from "lucide-react"
+import { Button } from "../components/ui/button"
+import { Separator } from "../components/ui/separator"
 const Footer = () => {
   return (
-    <footer className="bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 transition-colors duration-300">
-      <div className="container mx-auto px-[10%] py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
+    <div className="relative">
+      {/* SVG Curve */}
+      <svg className="absolute top-0 left-0 w-full h-24 md:h-32 lg:h-40" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" style={{zIndex:1}}>
+        <path fill="#1e293b" d="M0,0 C400,120 1040,0 1440,120 L1440,0 L0,0 Z" />
+      </svg>
+      <footer className="relative bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-t-5 border-gray-700" style={{zIndex:2}}>
+      
+      <div className="max-w-7xl mx-auto">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+          {/* Contact Details */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center">
-              <Image
-                src={logo}
-                alt="TWCA Logo"
-                width={130}
-                height={80}
-                priority
-                className="transition-all duration-300 p-1 w-[81px] h-[50px] md:w-[100px] md:h-[62px]"
-                style={{
-                  filter: 'invert(19%) sepia(82%) saturate(638%) hue-rotate(176deg) brightness(95%) contrast(101%)'
-                }}
-              />
-            </Link>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Trust Wealthy Capital Advisors provides comprehensive financial planning and investment management services.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-primary-600 dark:text-primary-400 mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/disclosures" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  Disclosures
-                </Link>
-              </li>
-              <li>
-                <Link href="/disclaimers" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  Disclaimers
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-semibold text-primary-600 dark:text-primary-400 mb-4">Contact Us</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="tel:+1234567890" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  Phone: +91 9818091848
+            <h3 className="text-xl font-semibold mb-6">Contact Details</h3>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <Mail className="h-5 w-5 mt-0.5 text-blue-400 flex-shrink-0" />
+                <a href="mailto:premalrsstudy@gmail.com" className="text-gray-300 hover:text-white transition-colors">
+                  cstushargoswami14@gmail.com
                 </a>
-              </li>
-              <li>
-                <a href="mailto:info@twca.com" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  Email: cstushargoswami14@gmail.com
+              </div>
+              <div className="flex items-start gap-3">
+                <Phone className="h-5 w-5 mt-0.5 text-blue-400 flex-shrink-0" />
+                <a href="tel:+917990408340" className="text-gray-300 hover:text-white transition-colors">
+                  +91 9818091848
                 </a>
-              </li>
-              <li>
-                <address className="not-italic text-neutral-600 dark:text-neutral-400">
-                  House no. 912, First Floor Sector 16<br />
-                  Faridabad, Haryana, 121001
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 mt-0.5 text-blue-400 flex-shrink-0" />
+                <address className="text-gray-300 not-italic">
+                  House no. 912, First Floor Sector 16
+                  <br />
+                  Faridabad, Haryana, 121002
                 </address>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
 
-          {/* Social Links */}
-          <div>
-            <h3 className="font-semibold text-primary-600 dark:text-primary-400 mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
-              <a href="#" className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors" aria-label="LinkedIn">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
+          {/* Center Content */}
+          <div className="text-center space-y-6">
+            <div className="space-y-2">
+              <p className="text-sm text-gray-300">© 2025 Trust Wealthy Capital Advisors</p>
+              <p className="text-sm text-gray-300">All rights reserved.</p>
+            </div>
+
+            <div className="space-y-2 text-sm text-gray-300">
+              <p>SEBI Research Analyst No. : INH000019141</p>
+              <p>BSE Enlistment No.: 6450</p>
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex flex-wrap justify-center gap-2 text-xs text-gray-400">
+              <a href="/terms-of-use" className="hover:text-white transition-colors">
+                Terms of Use
               </a>
-              <a href="#" className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors" aria-label="Twitter">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                </svg>
+              <span>|</span>
+              <a href="/privacy-policy" className="hover:text-white transition-colors">
+                Privacy Policy
               </a>
-              <a href="#" className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors" aria-label="Facebook">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd"/>
-                </svg>
+              <span>|</span>
+              <a href="/investor-charter" className="hover:text-white transition-colors">
+                Investor Charter of RA
               </a>
+              <span>|</span>
+              <a href="/refund-policy" className="hover:text-white transition-colors">
+                Refund Policy
+              </a>
+              <span>|</span>
+              <a href="/grievance-redressal" className="hover:text-white transition-colors">
+                Grievance Redressal
+              </a>
+              <span>|</span>
+              <a href="/smart-odr" className="hover:text-white transition-colors">
+                SMART ODR
+              </a>
+              <span>|</span>
+              <a href="/scores" className="hover:text-white transition-colors">
+                SCORES
+              </a>
+              <span>|</span>
+              <a href="/terms-conditions" className="hover:text-white transition-colors">
+                Most Important Terms & Conditions
+              </a>
+              <span>|</span>
+              <a href="/complaints" className="hover:text-white transition-colors">
+                Complaints Data
+              </a>
+            </div>
+          </div>
+
+          {/* Connect With Us */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold mb-6">Connect With Us</h3>
+            <div className="flex gap-3">
+              <Button size="icon" className="bg-blue-500 hover:bg-blue-600 rounded-full" asChild>
+                <a href="https://t.me/tushargoswamiRA" target="_blank" rel="noopener noreferrer">
+                  {/* Telegram SVG Icon */}
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.5 2.5L2 10.5c-1.1.4-1.1 1.1-.2 1.4l5.2 1.6 2 6.2c.3.9.7 1.1 1.4.7l2.8-2.1 4.2 3.1c.8.6 1.4.3 1.6-.7l3-14c.2-.9-.3-1.3-1.3-1zM8.7 13.8l8.2-5.2c.4-.2.8 0 .5.3l-7 6.3-.3 2.7c-.1.4-.3.4-.5 0l-1.1-3.8z"/>
+                  </svg>
+                  <span className="sr-only">Telegram</span>
+                </a>
+              </Button>
+              <Button size="icon" className="bg-black hover:bg-gray-800 rounded-full" asChild>
+                <a href="https://x.com/trustwealthy_?s=21&t=sjW1vyMmRoSYzAX26f-WfA" target="_blank" rel="noopener noreferrer">
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                  <span className="sr-only">X (Twitter)</span>
+                </a>
+              </Button>
+              <Button size="icon" className="bg-red-600 hover:bg-red-700 rounded-full" asChild>
+                <a href="https://www.youtube.com/@TrustWealthyCapitalAdvisors" target="_blank" rel="noopener noreferrer">
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                  <span className="sr-only">YouTube</span>
+                </a>
+              </Button>
+            
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-neutral-200 dark:border-neutral-800 mt-8 pt-8 text-sm">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-neutral-600 dark:text-neutral-400">&copy; {new Date().getFullYear()} Trust Wealthy Capital Advisors. All rights reserved.</p>
-            <div className="flex space-x-4">
-              <Link href="/privacy" className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors">
-                Terms of Service
-              </Link>
+        <Separator className="bg-gray-700 my-8" />
+        {/* Company Logo and Name */}
+        <div className="text-center mb-8">
+          <div className="flex justify-center items-center mb-4">
+            <div className="bg-white p-4 rounded-lg">
+              <Image
+                src="/logo.svg"
+                alt="Trust Wealthy Capital Advisors"
+                width={200}
+                height={60}
+                className="h-12 w-auto"
+                unoptimized
+              />
             </div>
+          </div>
+        </div>
+
+        {/* Compliance Information */}
+        <div className="text-center space-y-4 text-sm text-gray-400">
+          <p>
+            Compliance officer: Tushar Goswami. Telephone number: +91 9818091848 . E-mail address:
+            cstushargoswami14@gmail.com.
+          </p>
+          <p>
+            Grievance officer: Tushar Goswami. Telephone number: +91 9818091848 . E-mail address:
+            cstushargoswami14@gmail.com.
+          </p>
+
+          <Separator className="bg-gray-700 my-6" />
+
+          <p className="text-xs leading-relaxed">
+            Registration granted by SEBI, membership of BSE and certification from NISM in no way guarantee performance
+            of the intermediary or provide any assurance of returns to investors.
+          </p>
+          <p className="text-xs leading-relaxed">
+            Investment in securities market are subject to market risks. Read all the related documents carefully before
+            investing.
+          </p>
+
+          <div className="pt-4">
+            <p className="text-xs text-gray-500">Managed By – Trust Wealthy Capital Advisors</p>
           </div>
         </div>
       </div>
     </footer>
+    </div>
   );
 };
 

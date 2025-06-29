@@ -20,7 +20,7 @@ const About = () => (
                     sizes="(max-width: 768px) 100vw, 320px"
                 />
             </div>
-            <div className="text-lg md:text-xl text-primary-600 dark:text-primary-400 leading-relaxed flex flex-col justify-center items-start w-full md:w-2/3">
+            <div className="text-lg md:text-xl text-neutral-700 dark:text-neutral-200 leading-relaxed flex flex-col justify-center items-start w-full md:w-2/3">
                 <h1 className="text-4xl md:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-8 text-left self-start">About Us</h1>
                 <p className="mb-4">
                     At TWCA, we’re committed to helping you master the why behind every trade. Our focus is on developing a deep understanding of setups, sharpening your decision-making, and building the discipline to trade with consistency across all market conditions.
