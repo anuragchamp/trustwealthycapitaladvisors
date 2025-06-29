@@ -70,7 +70,7 @@ const Footer = () => {
               </li>
               <li>
                 <address className="not-italic text-neutral-600 dark:text-neutral-400">
-                  House no. 912, First Floor Sector 14<br />
+                  House no. 912, First Floor Sector 16<br />
                   Faridabad, Haryana, 121001
                 </address>
               </li>
