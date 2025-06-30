@@ -8,9 +8,9 @@ export const metadata = {
 
 const Disclaimer = () => (
   <>
-    <div className="container mx-auto px-[10%] py-16 min-h-screen text-neutral-600 dark:text-neutral-400">
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-neutral-600 dark:text-neutral-400">Disclaimer</h1>
-      <ul className="list-disc pl-6 space-y-4 text-lg">
+    <div className="container mx-auto px-[10%] py-16 min-h-screen ">
+      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-primary-600 dark:text-primary-400">Disclaimer</h1>
+      <ul className="list-disc pl-6 space-y-4 text-lg text-neutral-900 dark:text-neutral-400">
         <li>Tushar Goswami is registered with SEBI as Individual Research Analyst vide Registration number INH000019141 on December 17th, 2024 pursuant to which it provides Research Analyst services to its clients.</li>
         <li className='font-bold'>Investment in securities market is subject to market risks. Read all the related documents carefully before investing.</li>
         <li className='font-bold'>Registration granted by SEBI and certification from NISM is no way guarantee performance of the intermediary or provide any assurance of returns to investors.</li>

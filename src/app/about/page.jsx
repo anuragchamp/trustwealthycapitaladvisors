@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Metadata } from 'next';
 
 export const metadata = {
     title: 'About Us | Trust Wealthy Capital Advisors',
@@ -20,17 +19,20 @@ const About = () => (
                     sizes="(max-width: 768px) 100vw, 320px"
                 />
             </div>
-            <div className="text-lg md:text-xl text-neutral-700 dark:text-neutral-200 leading-relaxed flex flex-col justify-center items-start w-full md:w-2/3">
-                <h1 className="text-4xl md:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-8 text-left self-start">About Us</h1>
-                <p className="mb-4">
-                    At TWCA, we’re committed to helping you master the why behind every trade. Our focus is on developing a deep understanding of setups, sharpening your decision-making, and building the discipline to trade with consistency across all market conditions.
-                </p>
-                <p className="mb-4">
-                    Through structured guidance, hands-on learning, and real-time support, we make your stock market journey clear, simple, and stress-free.
-                </p>
-                <p>
-                    This isn’t just about placing trades — it’s about growing your confidence, developing independence, and achieving long-term success in the markets with TWCA by your side.
-                </p>
+            <div className="text-lg md:text-xl leading-relaxed flex flex-col justify-center items-start w-full md:w-2/3">
+                <h1 className="text-4xl md:text-5xl font-bold  text-primary-600 dark:text-primary-400 mb-8 text-left self-start">About Us</h1>
+                <div className='text-neutral-900 dark:text-neutral-400'>
+                    <p className="mb-4">
+                        At TWCA, we’re committed to helping you master the why behind every trade. Our focus is on developing a deep understanding of setups, sharpening your decision-making, and building the discipline to trade with consistency across all market conditions.
+                    </p>
+                    <p className="mb-4">
+                        Through structured guidance, hands-on learning, and real-time support, we make your stock market journey clear, simple, and stress-free.
+                    </p>
+                    <p>
+                        This isn’t just about placing trades — it’s about growing your confidence, developing independence, and achieving long-term success in the markets with TWCA by your side.
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>

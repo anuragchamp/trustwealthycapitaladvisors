@@ -17,13 +17,14 @@ const Banner = () => {
         setIsVisible(true);
     }, []);
     return (<div className="relative min-h-[80vh] lg:min-h-screen flex items-center overflow-hidden py-20">        {/* Background Pattern */}
-        <div className="absolute inset-0 z-0">            <div className="absolute inset-0"
-            style={{
-                background: `url('/pattern.svg') repeat center`,
-                backgroundSize: '8px',
-                opacity: 0.01
-            }}
-        />
+        <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0"
+                style={{
+                    background: `url('/pattern.svg') repeat center`,
+                    backgroundSize: '8px',
+                    opacity: 0.01
+                }}
+            />
 
         </div>
 
@@ -39,7 +40,7 @@ const Banner = () => {
 
                     <h3 className='mb-[16px] font-bold text-red-400'>- Tushar Goswami SEBI Registered Research Analyst</h3>
 
-                    <div className="space-y-6 text-neutral-600 dark:text-neutral-400">
+                    <div className="space-y-6 text-neutral-900 dark:text-neutral-400">
                         <p className="text-lg md:text-xl leading-relaxed">
                             We focus on helping you truly understand the importance of a setup — the logic behind every trade — and how to execute it consistently across various market conditions.
                         </p>
@@ -90,27 +91,52 @@ const Banner = () => {
                 </div>
             </div>
 
-            {/* Customer Feedback Section */}
-            <div className="mt-20">
-                <div className="relative flex flex-col items-center mb-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400 text-center">What Our Customers Say</h2>
-                    <span className="block w-[20vw] h-20 mt-[-20px]">
-                        <img src="/border-bottom-2.png" alt="Section underline" className="w-full h-full object-fit select-none pointer-events-none" draggable="false" />
-                    </span>
-                </div>
-                <div className="relative max-w-xl mx-auto">
-                    <div className="overflow-hidden rounded-2xl bg-transparent">
-                        <div className="flex items-center justify-center h-40 md:h-40 transition-all duration-700">
-                            <Image
-                                src={feedbackImages[current]}
-                                alt={`Customer Feedback ${current + 1}`}
-                                width={400}
-                                height={320}
-                                className="object-contain h-full w-auto"
-                                priority
-                            />
-                        </div>
-                        {/* Slide Controls */}
+            {/* /* Section Divider SVG: Chevron
+                        <div className="w-[100vw]">
+                            <svg className=" h-8 md:h-12" viewBox="0 0 800 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="0,20 400,35 800,20" stroke="#64748b" strokeWidth="3" fill="none" />
+                            </svg>
+                        </div> */} 
+
+                        <div className="relative mt-20">
+                            <div className="absolute w-[100vw]">
+                                {/* <svg className="h-32 md:h-40" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    {Array.from({ length: 40 }).map((_, i) => {
+                                        // Generate random positions and radius for each circle
+                                        const cx = Math.random() * 780 + 10; // 10 to 790
+                                        const cy = Math.random() * 100 + 10; // 10 to 110
+                                        const r = Math.random() * 7 + 4; // radius 4 to 11
+                                        return (
+                                            <circle
+                                                key={i}
+                                                cx={cx}
+                                                cy={cy}
+                                                r={r}
+                                                fill="#64748b25"
+                                            />
+                                        );
+                                    })}
+                                </svg> */}
+                            </div>
+                            <div className="relative flex flex-col items-center mb-8">
+                                <h2 className="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400 text-center">What Our Customers Say</h2>
+                                <span className="block w-[20vw] h-20 mt-[-20px]">
+                                    <img src="/border-bottom-2.png" alt="Section underline" className="w-full h-full object-fit select-none pointer-events-none" draggable="false" />
+                                </span>
+                            </div>
+                            <div className="relative max-w-xl mx-auto">
+                                <div className="overflow-hidden rounded-2xl bg-transparent">
+                                    <div className="flex items-center justify-center h-40 md:h-40 transition-all duration-700">
+                                        <Image
+                                            src={feedbackImages[current]}
+                                            alt={`Customer Feedback ${current + 1}`}
+                                            width={400}
+                                            height={320}
+                                            className="object-contain h-full w-auto"
+                                            priority
+                                        />
+                                    </div>
+                                    {/* Slide Controls */}
                         <div className="flex justify-center gap-3 py-4">
                             {feedbackImages.map((_, idx) => (
                                 <button
